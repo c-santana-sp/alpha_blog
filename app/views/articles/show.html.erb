@@ -2,3 +2,10 @@
 
 <p><b>Title:</b> <%= @article.title%></p>
 <p><b>Description:</b> <%= @article.description%></p>
+<br/>
+
+<p>
+	<%= link_to 'edit', edit_article_path(@article)%> | 
+	<%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" }%> | 
+	<%= link_to 'home', articles_path%>
+</p>
